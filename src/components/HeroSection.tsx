@@ -38,7 +38,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <span className="text-[#6b7770]" aria-hidden="true">·</span>
           <span className="text-[#6b7770] font-normal">Independent Product Studio</span>
           <span className="text-[#6b7770]" aria-hidden="true">·</span>
-          <span className="font-mono text-[11px] text-[#6b7770]">v0.9.3 Ready</span>
+          <span className="font-mono text-[11px] text-[#6b7770]">v0.9.3 beta</span>
         </div>
 
         {/* Hero Headline */}
@@ -68,8 +68,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="px-6 py-3.5 text-sm font-semibold text-white bg-[#1f5a45] hover:bg-[#174837] rounded-lg transition-all shadow-sm hover:shadow-md active:scale-[0.99] flex items-center gap-2 cursor-pointer"
             >
               <Download className="w-4 h-4" />
-              <span>Get the Extension</span>
-              <span className="text-xs font-mono text-emerald-200/90 ml-1">v0.9.3</span>
+              <span>Extension beta</span>
             </button>
             <button
               onClick={onOpenApp}
@@ -85,7 +84,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <span aria-hidden="true">·</span>
             <span>No automatic submission</span>
             <span aria-hidden="true">·</span>
-            <span>Local-first storage</span>
+            <span>Preview before filling</span>
           </div>
         </div>
 

@@ -19,11 +19,11 @@ import { INITIAL_APPLICATIONS, MOCK_PROFILES, MOCK_REMINDERS } from '../data/moc
 import { ApplicationStatus } from '../types/job-os';
 
 interface WorkspaceSectionProps {
-  onOpenAppModal: () => void;
+  onOpenPreview: () => void;
 }
 
 export const WorkspaceSection: React.FC<WorkspaceSectionProps> = ({
-  onOpenAppModal
+  onOpenPreview
 }) => {
   const [activeTab, setActiveTab] = useState<'applications' | 'profiles' | 'reminders' | 'settings'>('applications');
   const [statusFilter, setStatusFilter] = useState<string>('ALL');
@@ -68,15 +68,15 @@ export const WorkspaceSection: React.FC<WorkspaceSectionProps> = ({
               One central command center for every application.
             </h2>
             <p className="mt-3 text-base sm:text-lg text-[#3b4640] leading-relaxed">
-              No scattered spreadsheets. No forgotten deadlines. Seamlessly sync your Chrome Extension captures into an organized workspace.
+              Keep applications, profiles, and milestones organized in one workspace.
             </p>
           </div>
 
           <button
-            onClick={onOpenAppModal}
+            onClick={onOpenPreview}
             className="self-start md:self-auto px-4 py-2 text-xs font-semibold text-[#1f5a45] bg-white border border-[#1f5a45]/30 hover:border-[#1f5a45] rounded-md transition-colors flex items-center gap-1.5 shadow-sm cursor-pointer whitespace-nowrap"
           >
-            <span>Test Live Interactive Demo</span>
+            <span>View Product Preview</span>
             <ExternalLink className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -364,7 +364,7 @@ export const WorkspaceSection: React.FC<WorkspaceSectionProps> = ({
                 Application Reminders &amp; Milestones
               </h3>
               <p className="text-xs text-[#6b7770]">
-                Proactive notifications for follow-ups, deadlines, and technical interview stages.
+                Track follow-ups, application deadlines, and interview milestones in your workspace.
               </p>
             </div>
 
@@ -438,26 +438,8 @@ export const WorkspaceSection: React.FC<WorkspaceSectionProps> = ({
               </div>
 
               <div className="p-4 bg-[#fcfbf9] rounded border border-[#e4eae6] space-y-3">
-                <div className="font-bold text-[#131a16] text-sm">Data Export</div>
-                <p className="text-xs text-[#3b4640]">
-                  Download your entire application history, past job notes, and profiles at any time.
-                </p>
-                <div className="flex items-center gap-2 pt-1">
-                  <button
-                    onClick={() => alert('Exporting full Job OS dataset as JSON...')}
-                    className="px-3 py-1.5 bg-[#1f5a45] text-white rounded text-xs font-semibold flex items-center gap-1.5 hover:bg-[#174837] cursor-pointer"
-                  >
-                    <Download className="w-3.5 h-3.5" />
-                    <span>Export JSON</span>
-                  </button>
-                  <button
-                    onClick={() => alert('Exporting application table as CSV...')}
-                    className="px-3 py-1.5 bg-white border border-[#d0dbd4] text-[#131a16] rounded text-xs font-semibold flex items-center gap-1.5 hover:bg-slate-50 cursor-pointer"
-                  >
-                    <FileSpreadsheet className="w-3.5 h-3.5" />
-                    <span>Export CSV</span>
-                  </button>
-                </div>
+                <div className="font-bold text-[#131a16] text-sm">Workspace settings</div>
+                <p className="text-xs text-[#3b4640]">This product preview illustrates organization features only. Public self-service data export is not available yet.</p>
               </div>
             </div>
           </div>

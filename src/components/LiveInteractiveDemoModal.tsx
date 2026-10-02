@@ -266,7 +266,7 @@ export const LiveInteractiveDemoModal: React.FC<LiveInteractiveDemoModalProps> =
               }}
               className="px-3 py-1.5 bg-[#1f5a45] text-white rounded text-xs font-semibold hover:bg-[#174837] cursor-pointer"
             >
-              Get Extension v0.9.3
+              Extension beta status
             </button>
             <button
               onClick={onClose}

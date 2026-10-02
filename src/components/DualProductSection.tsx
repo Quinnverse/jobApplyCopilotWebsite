@@ -53,14 +53,14 @@ export const DualProductSection: React.FC<DualProductSectionProps> = ({
               </div>
 
               <p className="mt-4 text-sm text-[#3b4640] leading-relaxed">
-                Lives in your browser toolbar. Detects postings as you browse, extracts metadata without copy-pasting, and injects safe autofill matches with full user preview.
+                The beta extension is designed to detect postings and prepare safe autofill previews when a site is compatible. You review every proposed value.
               </p>
 
               {/* Responsibilities list */}
               <div className="mt-6 space-y-2.5 text-xs text-[#3b4640]">
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#1f5a45] shrink-0" />
-                  <span><strong>1-Click Job Capture:</strong> Extract role, company, URL, and salary</span>
+                  <span><strong>Job capture:</strong> Detect role and company details for review</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#1f5a45] shrink-0" />
@@ -72,7 +72,7 @@ export const DualProductSection: React.FC<DualProductSectionProps> = ({
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#1f5a45] shrink-0" />
-                  <span><strong>Offline Cache &amp; Queue:</strong> Works reliably even on intermittent networks</span>
+                  <span><strong>Human-controlled:</strong> Never submits an application</span>
                 </div>
               </div>
             </div>
@@ -84,7 +84,7 @@ export const DualProductSection: React.FC<DualProductSectionProps> = ({
                 className="px-4 py-2 text-xs font-semibold text-white bg-[#1f5a45] hover:bg-[#174837] rounded-md transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm"
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>Get Extension</span>
+                <span>Extension beta</span>
               </button>
             </div>
           </div>
@@ -110,7 +110,7 @@ export const DualProductSection: React.FC<DualProductSectionProps> = ({
               </div>
 
               <p className="mt-4 text-sm text-[#3b4640] leading-relaxed">
-                Your permanent home base for your search. Manage multiple tailored profiles, track pipeline stages, schedule follow-ups, and review past interview timelines.
+                Your workspace for tailored profiles, application stages, follow-up records, and interview milestones.
               </p>
 
               {/* Responsibilities list */}
@@ -125,17 +125,17 @@ export const DualProductSection: React.FC<DualProductSectionProps> = ({
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#1f5a45] shrink-0" />
-                  <span><strong>Milestone Reminders:</strong> Never miss application deadlines or follow-ups</span>
+                  <span><strong>Milestone records:</strong> Track follow-ups, deadlines, and interview stages</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#1f5a45] shrink-0" />
-                  <span><strong>Full Data Portability:</strong> Export your complete search data as JSON or CSV</span>
+                  <span><strong>Candidate-controlled profiles:</strong> Choose the profile you use for each opportunity</span>
                 </div>
               </div>
             </div>
 
             <div className="mt-8 pt-5 border-t border-[#e4eae6] flex items-center justify-between">
-              <span className="text-xs text-[#6b7770] font-mono">Instant Cloud Sync</span>
+              <span className="text-xs text-[#6b7770] font-mono">Web Workspace</span>
               <button
                 onClick={onOpenApp}
                 className="px-4 py-2 text-xs font-semibold text-[#1f5a45] hover:text-[#174837] bg-[#f0f5f2] hover:bg-[#e3ede7] rounded-md transition-colors flex items-center gap-1.5 cursor-pointer"

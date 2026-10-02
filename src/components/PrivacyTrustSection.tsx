@@ -66,7 +66,7 @@ export const PrivacyTrustSection: React.FC = () => {
               Full Data Portability
             </h3>
             <p className="mt-2 text-xs text-[#3b4640] leading-relaxed">
-              Your application data is yours. Export your complete tracker, interview notes, and profiles at any time in standard JSON or CSV formats.
+              Your application data remains under your control. Public self-service export is not currently available.
             </p>
           </div>
 

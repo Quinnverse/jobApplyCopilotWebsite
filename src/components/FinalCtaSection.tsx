@@ -34,8 +34,7 @@ export const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({
             className="px-6 py-3.5 text-sm font-semibold text-white bg-[#1f5a45] hover:bg-[#174837] rounded-lg transition-all shadow-sm hover:shadow active:scale-[0.99] flex items-center gap-2 cursor-pointer"
           >
             <Download className="w-4 h-4" />
-            <span>Get the Extension</span>
-            <span className="font-mono text-xs text-emerald-200">v0.9.3</span>
+            <span>Extension beta</span>
           </button>
           
           <button
@@ -53,7 +52,7 @@ export const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({
           <span className="hidden sm:inline" aria-hidden="true">·</span>
           <span>Find better tools. Build what&apos;s missing.</span>
           <span className="hidden sm:inline" aria-hidden="true">·</span>
-          <span>Manifest V3 · Local-first data architecture</span>
+          <span>Reviewable, deterministic workflow</span>
         </div>
 
       </div>

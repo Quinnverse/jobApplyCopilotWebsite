@@ -12,112 +12,44 @@ import { FaqSection } from './components/FaqSection';
 import { FinalCtaSection } from './components/FinalCtaSection';
 import { Footer } from './components/Footer';
 import { DownloadModal } from './components/DownloadModal';
-import { PrivacyModal } from './components/PrivacyModal';
-import { TermsModal } from './components/TermsModal';
-import { HelpModal } from './components/HelpModal';
 import { LiveInteractiveDemoModal } from './components/LiveInteractiveDemoModal';
+import { DocumentPage } from './components/DocumentPage';
+
+const documentPaths = {
+  '/privacy/': 'privacy',
+  '/terms/': 'terms',
+  '/help/': 'help',
+} as const;
 
 export default function App() {
-  const [downloadModalOpen, setDownloadModalOpen] = useState(false);
-  const [liveDemoModalOpen, setLiveDemoModalOpen] = useState(false);
-  const [privacyModalOpen, setPrivacyModalOpen] = useState(false);
-  const [termsModalOpen, setTermsModalOpen] = useState(false);
-  const [helpModalOpen, setHelpModalOpen] = useState(false);
+  const documentKind = documentPaths[window.location.pathname as keyof typeof documentPaths];
+  if (documentKind) return <DocumentPage kind={documentKind} />;
 
-  const handleOpenApp = () => {
-    // Open the interactive preview sandbox or link directly to production
-    setLiveDemoModalOpen(true);
-  };
-
-  const handleGetExtension = () => {
-    setDownloadModalOpen(true);
-  };
+  const [extensionModalOpen, setExtensionModalOpen] = useState(false);
+  const [previewModalOpen, setPreviewModalOpen] = useState(false);
+  const openWebApp = () => window.location.assign('https://jobs.quinnverse.tech');
 
   return (
     <div className="min-h-screen flex flex-col bg-[#fcfbf9] text-[#131a16]">
-      {/* Top Bar Navigation */}
-      <Navbar
-        onOpenApp={handleOpenApp}
-        onOpenDownload={handleGetExtension}
-        onOpenHelp={() => setHelpModalOpen(true)}
-      />
-
-      {/* Main Marketing Narrative Sections */}
+      <Navbar onOpenApp={openWebApp} onOpenDownload={() => setExtensionModalOpen(true)} />
       <main className="flex-1">
-        {/* Section 01: Hero */}
-        <HeroSection
-          onGetExtension={handleGetExtension}
-          onOpenApp={handleOpenApp}
-        />
-
-        {/* Section 02: The Problem */}
+        <HeroSection onGetExtension={() => setExtensionModalOpen(true)} onOpenApp={openWebApp} />
         <ProblemSection />
-
-        {/* Section 03: The Core Flow */}
         <CoreFlowSection />
-
-        {/* Section 04: Autofill Without Losing Control */}
         <AutofillControlSection />
-
-        {/* Section 05: Web Workspace */}
-        <WorkspaceSection onOpenAppModal={handleOpenApp} />
-
-        {/* Section 06: Built for Deterministic Workflows */}
+        <WorkspaceSection onOpenPreview={() => setPreviewModalOpen(true)} />
         <DeterministicSection />
-
-        {/* Section 07: Extension + Web Dual Product */}
-        <DualProductSection
-          onGetExtension={handleGetExtension}
-          onOpenApp={handleOpenApp}
-        />
-
-        {/* Section 08: Privacy & Trust Principles */}
+        <DualProductSection onGetExtension={() => setExtensionModalOpen(true)} onOpenApp={openWebApp} />
         <PrivacyTrustSection />
-
-        {/* Section 09: FAQ */}
         <FaqSection />
-
-        {/* Section 10: Final CTA */}
-        <FinalCtaSection
-          onGetExtension={handleGetExtension}
-          onOpenApp={handleOpenApp}
-        />
+        <FinalCtaSection onGetExtension={() => setExtensionModalOpen(true)} onOpenApp={openWebApp} />
       </main>
-
-      {/* Footer */}
-      <Footer
-        onOpenPrivacy={() => setPrivacyModalOpen(true)}
-        onOpenTerms={() => setTermsModalOpen(true)}
-        onOpenHelp={() => setHelpModalOpen(true)}
-        onOpenDownload={handleGetExtension}
-      />
-
-      {/* Modals & Subpages */}
-      <DownloadModal
-        isOpen={downloadModalOpen}
-        onClose={() => setDownloadModalOpen(false)}
-        onOpenApp={handleOpenApp}
-      />
-
+      <Footer onOpenDownload={() => setExtensionModalOpen(true)} />
+      <DownloadModal isOpen={extensionModalOpen} onClose={() => setExtensionModalOpen(false)} />
       <LiveInteractiveDemoModal
-        isOpen={liveDemoModalOpen}
-        onClose={() => setLiveDemoModalOpen(false)}
-        onOpenDownload={handleGetExtension}
-      />
-
-      <PrivacyModal
-        isOpen={privacyModalOpen}
-        onClose={() => setPrivacyModalOpen(false)}
-      />
-
-      <TermsModal
-        isOpen={termsModalOpen}
-        onClose={() => setTermsModalOpen(false)}
-      />
-
-      <HelpModal
-        isOpen={helpModalOpen}
-        onClose={() => setHelpModalOpen(false)}
+        isOpen={previewModalOpen}
+        onClose={() => setPreviewModalOpen(false)}
+        onOpenDownload={() => setExtensionModalOpen(true)}
       />
     </div>
   );

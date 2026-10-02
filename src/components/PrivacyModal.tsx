@@ -76,7 +76,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
               4. Data Export &amp; Permanent Deletion
             </h3>
             <p>
-              You maintain complete ownership of your application log. You can export your full dataset as JSON or CSV at any time from Web Workspace Settings, or purge your account and records permanently.
+              This marketing site does not provide self-service data export or account deletion controls. Do not treat future product intentions as available data rights.
             </p>
           </div>
 

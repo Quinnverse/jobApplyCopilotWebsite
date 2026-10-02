@@ -10,7 +10,7 @@ export const CoreFlowSection: React.FC = () => {
       title: 'Save',
       tagline: 'Capture job postings in one click',
       icon: BookmarkPlus,
-      description: 'When viewing an open role on Greenhouse, Lever, Ashby, or company career boards, the extension detects the posting title, company, salary band, and URL to persist it instantly to your workspace.',
+      description: 'Adapters are implemented for common ATS workflows including Greenhouse, Lever, and Ashby. Real-world compatibility is being verified progressively.',
       details: [
         'DOM parser extracts role and company metadata',
         'Local persistence protects your active draft',

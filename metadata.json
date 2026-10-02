@@ -1,6 +1,5 @@
 {
   "name": "Job Application Copilot — Job OS",
   "description": "The product website for Job Application Copilot by Quinnverse. Save jobs, track applications, and fill repetitive forms faster without handing control over to an auto-apply bot.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "requestFramePermissions": []
 }

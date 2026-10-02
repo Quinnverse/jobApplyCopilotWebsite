@@ -19,7 +19,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Zone 1: Brand Wordmark (Single cohesive anchor) */}
         <a
-          href="#"
+          href="/"
           className="flex items-center gap-2.5 text-[#131a16] group transition-opacity hover:opacity-90"
         >
           <ProductMark size="sm" variant="mark" />
@@ -85,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="px-4 py-2 text-xs font-semibold text-white bg-[#1f5a45] hover:bg-[#174837] rounded-md transition-all shadow-sm hover:shadow active:scale-[0.98] whitespace-nowrap flex items-center gap-1.5 cursor-pointer"
           >
             <Download className="w-3.5 h-3.5" />
-            <span>Get Extension v0.9.3</span>
+            <span>Extension beta</span>
           </button>
         </div>
 
@@ -95,7 +95,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={onOpenDownload}
             className="px-3 py-1.5 text-xs font-semibold text-white bg-[#1f5a45] rounded-md"
           >
-            Extension
+            Beta
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -173,7 +173,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="w-full text-center py-2 text-xs font-semibold text-white bg-[#1f5a45] rounded-md shadow-sm"
             >
-              Get Extension v0.9.3
+              Extension beta status
             </button>
           </div>
         </div>
